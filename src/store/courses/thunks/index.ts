@@ -1,0 +1,1 @@
+export { getCoursesThunk } from './get-courses.thunk';

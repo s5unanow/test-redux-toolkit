@@ -1,0 +1,6 @@
+export const HTTP_CLIENT_SETTINGS = {
+  BASE_URL: 'http://localhost:3000/',
+  TIMEOUT: 2000,
+}
+
+export const UNSUCCESSFUL_RESPONSE = 'UNSUCCESSFUL_RESPONSE';

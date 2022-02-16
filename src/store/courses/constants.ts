@@ -1,0 +1,3 @@
+export const COURSES_SLICE = 'COURSES_SLICE';
+
+export const GET_COURSES = `${COURSES_SLICE}/GET_COURSES`;
