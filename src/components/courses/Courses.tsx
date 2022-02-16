@@ -3,15 +3,20 @@ import { useCourses } from 'services/courses/useCourses';
 import { CoursesList } from './courses-list/CoursesList';
 
 export const Courses: React.FC = () => {
-  const { courses, isLoading, isError } = useCourses();
+  const { courses, isLoading, isError, getCourses } = useCourses();
 
   if (isLoading) {
     return <LoaderScreen />;
   }
 
   if (isError) {
-    return <ErrorScreen>Something went wrong!</ErrorScreen>;
+    return (
+      <ErrorScreen>
+        <div>Something went wrong!</div>
+        <button className="border-2 p-5 w-full mt-10 bg-slate-50" onClick={getCourses}>RefetchCourses</button>
+      </ErrorScreen>
+    );
   }
 
-  return <CoursesList courses={courses} />
+  return <CoursesList courses={courses} />;
 };
